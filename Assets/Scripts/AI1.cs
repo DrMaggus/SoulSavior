@@ -9,6 +9,7 @@ public class AI1 : MonoBehaviour {
 	private float Ydif;
 	public float speed;
 	private int Wall;
+
    
 	void Start (){
 
@@ -30,5 +31,8 @@ public class AI1 : MonoBehaviour {
 		GetComponent<Rigidbody2D>().AddForce (Playerdirection.normalized * speed);
 
 
+
 	}
+
+
 }

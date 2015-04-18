@@ -46,14 +46,14 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\PlayerHealth.cs" />
      <Compile Include="Assets\Scripts\AI1.cs" />
      <Compile Include="Assets\Scripts\PlayerAnimation.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\Transformation.cs" />
      <Compile Include="Assets\Scripts\fade.cs" />
-     <Compile Include="Assets\Transformation.cs" />
-     <Compile Include="Assets\titlescreen.cs" />
      <Compile Include="Assets\SwordAnimation.cs" />
+     <Compile Include="Assets\titlescreen.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
