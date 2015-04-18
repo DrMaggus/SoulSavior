@@ -8,8 +8,15 @@ public class AI1 : MonoBehaviour {
 	private float Xdif;
 	private float Ydif;
 	public float speed;
-	private int wall;
+	private int Wall;
    
+	void Start (){
+
+		Wall = 1 << 8;
+
+	}
+
+
 	void Update () {
 
 		Player = GameObject.Find ("Player").transform.position;
@@ -17,9 +24,11 @@ public class AI1 : MonoBehaviour {
 		Ydif = Player.y - transform.position.y;
 
 		Playerdirection = new Vector2 (Xdif, Ydif);
-		//if(Physics2D.Raycast(transform.position, Playerdirection ))
+
+
+		if(!Physics2D.Raycast(transform.position, Playerdirection , 3 ,Wall))
 		GetComponent<Rigidbody2D>().AddForce (Playerdirection.normalized * speed);
-		Debug.Log (Playerdirection);
+
 
 	}
 }
