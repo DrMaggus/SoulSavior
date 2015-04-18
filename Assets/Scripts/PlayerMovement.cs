@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour {
 	 private float speed = 0.03f;
 
 
-	void Update () {
+	void FixedUpdate () {
 	
 		if (Input.GetKey (KeyCode.D))
 			transform.Translate (Vector2.right * speed);
