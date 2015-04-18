@@ -4,7 +4,7 @@ using System.Collections;
 public class fade : MonoBehaviour {
 
 	public GameObject ga;
-	public string level;
+	public string nextScene;
 	AudioSource wizz;
 	float fademax = 1f;
 	float fademin = 0f;
@@ -33,6 +33,6 @@ public class fade : MonoBehaviour {
 			this.fadeduration = 7f;
 		}
 		if (played && sr.color.a == 0f)
-			Application.LoadLevel("Level1");
+			Application.LoadLevel(nextScene);
 	}
 }
