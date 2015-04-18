@@ -6,31 +6,29 @@ public class Transformation : MonoBehaviour {
 	public Transform posplayer;
 	public Transform possword;
 	int roty = 0;
-	public Animator anim2;
+	public Animator ani;
 
 
 	//Vector3 rotplayer=new Vector3(0,0,0);
 	// Use this for initialization
 	void Start () {
-		anim2 = GetComponent<Animator>();
+		ani = GetComponent<Animator>();
 	}
 
-	// Update is called once per frame
-	void Update () {
+	void FixedUpdate(){
 		Vector3 transplayer=new Vector3(0,0,0);
 		Vector3 transsword=new Vector3(0,0,0);
 		Vector3 rotsword=new Vector3(0,0,0);
-
+		
 		transplayer = posplayer.transform.position;
 		transsword = possword.transform.position;
-
-
-
-		if (Input.GetKey (KeyCode.G)) {
-			anim2.SetBool ("atk", true);
-		}
+		
+	
+		if (Input.GetKeyDown (KeyCode.G)) {
+			ani.Play ("attack");
+		} 
 		//rotplayer = posplayer.rotation.eulerAngles;
-//		Debug.Log (transplayer + "_" + rotplayer);
+		//		Debug.Log (transplayer + "_" + rotplayer);
 		if (Input.GetKey (KeyCode.D)) {
 			transsword.x = transplayer.x + 0.137f;
 			transsword.y = transplayer.y;
@@ -51,13 +49,13 @@ public class Transformation : MonoBehaviour {
 			transsword.y = transplayer.y;
 			roty = 0;
 		}
-
-
-
-		Debug.Log (transplayer + "_" );
-		Debug.Log (transsword + "_" + roty);
+		
+		
+	
 		possword.transform.position=transsword;
 		possword.transform.rotation = new Quaternion(transform.rotation.x,roty,transform.rotation.z,transform.rotation.w);
 	}
+
 }
+
 
