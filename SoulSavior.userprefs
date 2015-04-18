@@ -1,9 +1,18 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\titlescreen.cs">
     <Files>
       <File FileName="Assets\titlescreen.cs" Line="9" Column="3" />
       <File FileName="Assets\Scripts\fade.cs" Line="36" Column="35" />
+=======
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Transformation.cs">
+    <Files>
+      <File FileName="Assets\Scripts\PlayerMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets\SwordAnimation.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Transformation.cs" Line="30" Column="9" />
+      <File FileName="Assets\Scripts\PlayerAnimation.cs" Line="14" Column="18" />
+>>>>>>> 685f378aa746704ae4cede8ccdad624f2b2ec546
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

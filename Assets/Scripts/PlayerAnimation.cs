@@ -12,6 +12,11 @@ public class PlayerAnimation : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (Input.GetKey (KeyCode.G)) {
+			anim.SetBool ("Attack", true);
+		}
+		
+		
 		if (Input.GetKey (KeyCode.A)) {
 						anim.SetBool ("Left", true);
 						anim.SetBool ("Down", false);

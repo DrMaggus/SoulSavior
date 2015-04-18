@@ -6,11 +6,13 @@ public class Transformation : MonoBehaviour {
 	public Transform posplayer;
 	public Transform possword;
 	int roty = 0;
+	public Animator anim2;
+
 
 	//Vector3 rotplayer=new Vector3(0,0,0);
 	// Use this for initialization
 	void Start () {
-
+		anim2 = GetComponent<Animator>();
 	}
 
 	// Update is called once per frame
@@ -23,6 +25,10 @@ public class Transformation : MonoBehaviour {
 		transsword = possword.transform.position;
 
 
+
+		if (Input.GetKey (KeyCode.G)) {
+			anim2.SetBool ("atk", true);
+		}
 		//rotplayer = posplayer.rotation.eulerAngles;
 //		Debug.Log (transplayer + "_" + rotplayer);
 		if (Input.GetKey (KeyCode.D)) {
@@ -45,6 +51,9 @@ public class Transformation : MonoBehaviour {
 			transsword.y = transplayer.y;
 			roty = 0;
 		}
+
+
+
 		Debug.Log (transplayer + "_" );
 		Debug.Log (transsword + "_" + roty);
 		possword.transform.position=transsword;
