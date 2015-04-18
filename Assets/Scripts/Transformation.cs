@@ -6,8 +6,8 @@ public class Transformation : MonoBehaviour {
 	public Transform posplayer;
 	public Transform possword;
 	int roty = 0;
-
 	public Animator anim2;
+
 
 	//Vector3 rotplayer=new Vector3(0,0,0);
 	// Use this for initialization
@@ -26,6 +26,9 @@ public class Transformation : MonoBehaviour {
 
 
 
+		if (Input.GetKey (KeyCode.G)) {
+			anim2.SetBool ("atk", true);
+		}
 		//rotplayer = posplayer.rotation.eulerAngles;
 //		Debug.Log (transplayer + "_" + rotplayer);
 		if (Input.GetKey (KeyCode.D)) {
@@ -49,48 +52,6 @@ public class Transformation : MonoBehaviour {
 			roty = 0;
 		}
 
-		//Animations
-		if (Input.GetKeyDown (KeyCode.D & KeyCode.G)) {
-			transsword.x = transplayer.x + 0.137f;
-			transsword.y = transplayer.y;
-			roty = 180;
-			anim2.SetBool ("Attack", true);
-		} else {
-			anim2.SetBool("Attack",false);
-		}
-
-		if (Input.GetKeyDown (KeyCode.A & KeyCode.G)) {
-			transsword.x = transplayer.x - 0.116f;
-			transsword.y = transplayer.y;
-			roty = 0;
-			anim2.SetBool ("Attack", true);
-		} else {
-			anim2.SetBool("Attack",false);
-		}
-
-		if (Input.GetKeyDown (KeyCode.W & KeyCode.G)) {
-			transsword.x = transplayer.x + 0.115f;
-			transsword.y = transplayer.y;
-			roty = 180;
-			anim2.SetBool ("Attack", true);
-		} else {
-			anim2.SetBool("Attack",false);
-		}
-
-		if (Input.GetKeyDown (KeyCode.S & KeyCode.G)) {
-			transsword.x = transplayer.x - 0.129f;
-			transsword.y = transplayer.y;
-			roty = 0;
-			anim2.SetBool ("Attack", true);
-		} else {
-			anim2.SetBool("Attack",false);
-		}
-
-
-
-
-
-		
 
 
 		Debug.Log (transplayer + "_" );
